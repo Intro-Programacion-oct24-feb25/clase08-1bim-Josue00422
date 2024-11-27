@@ -32,9 +32,16 @@ public class Ejemplo09 {
         int suma = 0;
         int contador_calificaciones = 0;
         
+        
         cadenaFinal = "Listado de Notas\n";
         
         do {
+            System.out.println("ingrese la nota del estudiante");
+            nota = entrada.nextInt();
+            entrada.nextLine();
+            System.out.println("ingrese el nombre del estudinate");
+            nombre = entrada.nextLine();
+        
             
             
             // agrego valor al acumulador
@@ -46,6 +53,9 @@ public class Ejemplo09 {
             System.out.println("Ingrese (-111) si desea salir del ciclo; "
                     + "cualquier otro número para continuar");
             salida = entrada.nextInt();
+            cadenaFinal = String.format("%sCalificación: %d del estudiante %s\n",
+                    cadenaFinal,
+                    nota,nombre.toLowerCase());
 
             if (salida == -111) {
                 bandera = false;

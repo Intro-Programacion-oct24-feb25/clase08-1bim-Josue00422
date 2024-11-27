@@ -45,11 +45,9 @@ public class Ejemplo06 {
                   ,contador,
           operacion);
           contador = contador +1;
-            
           
-           
         } while (contador <= limite);
-        System.out.println(cadenafinal);
+        System.out.printf("%s\n",cadenafinal);
 
     }
 }
