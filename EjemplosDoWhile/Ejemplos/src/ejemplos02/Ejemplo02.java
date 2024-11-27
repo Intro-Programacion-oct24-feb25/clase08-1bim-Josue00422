@@ -40,7 +40,7 @@ public class Ejemplo02 {
                 case ("y"):
                 case "s":
                     
-                    salida = false;
+                    bandera = false;
                     break;
             }
 
