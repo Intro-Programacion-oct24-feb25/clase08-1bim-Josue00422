@@ -12,7 +12,8 @@
  * 2 x 9 = 18
  * 2 x 10 = 20
  Atención, el límite en la solución es 10, de manera fija.
- Cambiar lo necesario para que el límite sea ingresado por el usuario. 
+ Cambiar lo necesario para que el límite sea ingresado por el usuario
+// aparte se debe utilizar una cadena acomomuladora. 
  */
 package ejemplos02;
 
@@ -31,13 +32,24 @@ public class Ejemplo06 {
         int tabla;
         int operacion;
         int contador = 1;
-        int limite;
-        
+        int limite ;
+        String cadenafinal = "";
+        System.out.println("ingrese el valor de la tabla que desea generar ");
+        tabla = entrada.nextInt();
+        System.out.println("ingrese el limite que desea para la tabla");
+        limite = entrada.nextInt();
+       
         do {
             operacion = tabla * contador;
-            System.out.printf("%d x %d = %d\n", tabla, contador, operacion);
-            contador = contador + 1;
+          cadenafinal = String.format("%s%d x %d = %d\n",cadenafinal,tabla 
+                  ,contador,
+          operacion);
+          contador = contador +1;
+            
+          
+           
         } while (contador <= limite);
+        System.out.println(cadenafinal);
 
     }
 }
